@@ -1,7 +1,12 @@
 ---
 
 name: Comandos de shell
-on: [push]
+# on: [push]
+on:
+  schedule:
+    - cron:  '*/3 * * * *'
+
+
 
 jobs:
   ejecutar-comandos-shell:
@@ -14,3 +19,21 @@ jobs:
           node -v
           npm -v
           cat /etc/os-release
+      - name: Shell de Python
+        shell: python
+        run: |
+          import platform
+          print(platform.processor())
+        
+
+  comandos-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Powershell
+        shell: powershell
+        run: Get-Location
+      - name: Bash
+        shell: bash
+        run: pwd
+      
+        
