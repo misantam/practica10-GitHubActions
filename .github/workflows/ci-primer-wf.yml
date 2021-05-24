@@ -7,8 +7,8 @@ jobs:
   ejecutar-comandos-shell:
     runs-on: ubuntu-latest
     steps:
-      - name: eccho cadena
-        run: echo "Hello world"
+      - name: echo cadena
+        run: eccho "Hello world"
       - name: scripts multilinea
         run: |
           node -v
