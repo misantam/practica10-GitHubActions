@@ -10,5 +10,5 @@ jobs:
               java -version
               mvn --version
               git clone https://github.com/wakaleo/game-of-life.git .
-              
+              cd game-of-life.git
               mvn test
