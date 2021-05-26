@@ -8,7 +8,7 @@ jobs:
   log-env:
     runs-on: ubuntu-latest
     env:
-      jOB_ENV: Disponible en todos los stepsde log-env
+      JOB_ENV: Disponible en todos los stepsde log-env
     steps:
       - name: Log Variables Entorno
         env:
