@@ -1,0 +1,17 @@
+---
+name: Actions
+on: push
+env: 
+  WF_ENV: Disponible en todos los jobs
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: bash
+        run: |
+              ls -la
+      - uses: actions/checkout@v2 # clona elo conteido del repositorio
+      - name: bash
+        run: |
+              ls -la
