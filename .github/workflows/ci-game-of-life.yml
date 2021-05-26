@@ -1,0 +1,14 @@
+---
+name: Game of life testing
+on: push
+
+jobs:
+  game-of-life-test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+              java -version
+              mvn --version
+              git clone https://github.com/wakaleo/game-of-life.git .
+              
+              mvn test
